@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>My portfolio</title>
 </head>
 <body>
     <style>
         body{
-            background: linear-gradient(
-             130deg,
-            #1a1a2e, /* deep navy */
-            #4a0e8f, /* royal purple */
-            #8b0000, /* dark red */
-            #1a1a2e
-            );
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             font-family: Roboto;
-            color: white;
-             margin: 0;
-             padding: 0;
+            color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
         }
     </style>
     <h1 style="text-align: center;">Ahmed Portfolio</h1>
@@ -29,12 +25,13 @@
             <a href="#about">About</a>
             <a href="#internships">Internships</a>
             <a href="#resume">Resume</a>
-            <a href="#Contact">Contact</a>
+            <a href="#contact">Contact</a>
     </navbar>
     <hr style="margin-top: 30px;">
-    <h1 id="about"><mark>Your creative partner</mark></h1>
-    <img id="PFP" src="./IMG/PFP.png">
-    <section id="about-size">
+    <section id="hero">
+        <div id="hero-content">
+            <h1 id="about" style="border-radius: 5px;">Your creative partner</h1>
+            <section id="about-size">
     <p>
         Hi, I’m Ahmed, 21, and a student in Industrial Electricity. I’m also learning web development to expand my career options and explore freelance opportunities, as I enjoy creativity and problem-solving. In my free time, I like playing video games—especially Death Stranding—and watching superhero movies.
     </p>
@@ -44,36 +41,49 @@
             <source src="\audio\my approch for solving problems.mp3" type="audio/mp3">
             your browser does not support this type of audio file.
         </audio>
+            </section>
+        </div>
+        <img id="PFP" src="./IMG/PFP.png" alt="Ahmed profile picture">
     </section>
     
-    <h1 id="internships"><mark>Internships</mark></h1>
-    <section id="Experience">
-        
-         <dl><i>Afric plomb</i> 
-           <dd><b>I was installing Electrical panel</b></dd>
-        </dl>
-        
-        <br>
-            <dl><i>Birif Amenagement</i> 
-           <dd><b>Installed electrical systems and wired equipment following safety standards.</b></dd>
-        </dl>
-        
-        <br>
-         <dl><i>Medexel</i> 
-           <dd><b>Completed an observational internship exploring medical equipment operation and basic installation.</b></dd>
-        </dl>
-        
-        <br>
-         <dl><i>CHAMSI ELEC</i> 
-           <dd><b>Wired electrical panels from technical drawings across various commercial and industrial applications.</b></dd>
-        </dl>
-        
-        
+    <h1 id="internships" style="border-radius: 5px;">Internships</h1>
+    <br>
+    <section class="Experience">
+         <ul>
+            <li>
+                <div class="exp-number">01 </div>
+                <div class="exp-content">
+                    <h3>Afric plomb</h3>
+                    <p>Installed electrical panels and wiring while following professional safety standards.</p>
+                </div>
+
+            </li>
+            <li>
+                <div class="exp-number">02 </div>
+                <div class="exp-content">
+                    <h3>Birig amenagement</h3>
+                    <p>Worked on electrical panel installation and system setup.</p>
+                </div>
+            </li>
+            <li>
+                <div class="exp-number">03 </div>
+                <div class="exp-content">
+                    <h3>Medexel</h3>
+                    <p>Completed an observational internship exploring medical equipment operation and installation.</p>
+                </div>
+            </li>
+            <li>
+                <div class="exp-number">04 </div>
+                <div class="exp-content">
+                    <h3>Chamsi elec</h3>
+                    <p>Wired electrical panels from technical drawings for commercial and industrial projects.</p>
+                </div>
+            </li>
     </section>
     <br>
     <hr>
     <section id="resume">
-        <h1>Resume</h1>
+        <h1 style="border-radius: 5px;">Resume</h1>
         <h3>Education</h3>
         <ul>
             <li>OFPPT-Industrial Electricity,2024 (in progress)</li>
@@ -90,11 +100,21 @@
     
     <form id="contact">
         <h2>Contact</h2>
-        <p><b>Email:</b><i> ahmedelkadioui399@gmail.com</i></p>
-        <p><b>Phone number:</b><i> 06 55 25 67 85</i></p>
-        <p><b>Instagram :</b><i> @elkadiouiahmed</i></p><br>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/elkadiouiahmed/" target="_blank">
+                <i class="fa-brands fa-instagram" style="color: rgb(255, 0, 218);"></i>
+            </a>
+            <a href="https://wa.me/212655256785" target="_blank">
+                <i class="fa-brands fa-whatsapp" style="color: rgb(99, 230, 190);"></i>            
+            </a>
+            <a href="mailto:ahmedelkadioui399@gmail.com" target="_blank">
+                <i class="fa-regular fa-envelope" style="color: rgb(255, 0, 0);"></i>           
+            </a>
+            
+        </div>
         <label>Message</label><br>
-        <textarea id="message" name="message" rows="6" cols="45" placeholder="write your message in here :)"></textarea>
+        <textarea style="resize:none;" id="message" name="message" rows="6" cols="45" placeholder="Write your message in here "></textarea>
     </form>
+    
 </body>
 </html>
